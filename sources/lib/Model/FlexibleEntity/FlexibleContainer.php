@@ -11,6 +11,7 @@ namespace PommProject\ModelManager\Model\FlexibleEntity;
 
 use PommProject\Foundation\Inflector;
 use PommProject\ModelManager\Exception\ModelException;
+use Traversable;
 
 /**
  * FlexibleContainerTrait
@@ -90,7 +91,7 @@ abstract class FlexibleContainer implements FlexibleEntityInterface, \IteratorAg
      *
      * @see FlexibleEntityInterface
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         return new \ArrayIterator($this->extract());
     }

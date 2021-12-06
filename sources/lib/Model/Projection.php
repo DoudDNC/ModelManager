@@ -10,6 +10,7 @@
 namespace PommProject\ModelManager\Model;
 
 use PommProject\ModelManager\Exception\ModelException;
+use Traversable;
 
 /**
  * Projection
@@ -56,7 +57,7 @@ class Projection implements \IteratorAggregate
      * @access public
      * @return \ArrayIterator
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         return new \ArrayIterator($this->types);
     }

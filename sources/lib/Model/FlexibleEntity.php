@@ -13,6 +13,7 @@ use PommProject\Foundation\Inflector;
 use PommProject\ModelManager\Exception\ModelException;
 use PommProject\ModelManager\Model\FlexibleEntity\FlexibleContainer;
 use PommProject\ModelManager\Model\FlexibleEntity\FlexibleEntityInterface;
+use Traversable;
 
 /**
  * FlexibleEntity
@@ -269,7 +270,7 @@ abstract class FlexibleEntity extends FlexibleContainer implements \ArrayAccess
      *
      * @see FlexibleEntityInterface
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         return new \ArrayIterator(array_merge($this->container, $this->getCustomFields()));
     }
@@ -343,7 +344,7 @@ abstract class FlexibleEntity extends FlexibleContainer implements \ArrayAccess
     /**
      * {@inheritdoc}
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         $method_name = "has".Inflector::studlyCaps($offset);
 
@@ -353,7 +354,7 @@ abstract class FlexibleEntity extends FlexibleContainer implements \ArrayAccess
     /**
      * {@inheritdoc}
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
         $this->__set($offset, $value);
     }
@@ -361,7 +362,7 @@ abstract class FlexibleEntity extends FlexibleContainer implements \ArrayAccess
     /**
      * {@inheritdoc}
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return $this->__get($offset);
     }
@@ -369,7 +370,7 @@ abstract class FlexibleEntity extends FlexibleContainer implements \ArrayAccess
     /**
      * {@inheritdoc}
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         $this->clear($offset);
     }
