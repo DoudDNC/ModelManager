@@ -13,6 +13,7 @@ use PommProject\Foundation\Inflector;
 use PommProject\ModelManager\Exception\ModelException;
 use PommProject\ModelManager\Model\FlexibleEntity\FlexibleContainer;
 use PommProject\ModelManager\Model\FlexibleEntity\FlexibleEntityInterface;
+use Traversable;
 
 /**
  * FlexibleEntity
@@ -272,7 +273,7 @@ abstract class FlexibleEntity extends FlexibleContainer implements \ArrayAccess
      *
      * @see FlexibleEntityInterface
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         return new \ArrayIterator(array_merge($this->container, $this->getCustomFields()));
     }
