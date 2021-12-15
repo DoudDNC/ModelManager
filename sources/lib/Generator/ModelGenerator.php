@@ -37,6 +37,7 @@ class ModelGenerator extends BaseGenerator
      */
     public function generate(ParameterHolder $input, array $output = [])
     {
+        // TODO fix getSchemaOid call
         $schema_oid = $this
             ->getSession()
             ->getInspector()

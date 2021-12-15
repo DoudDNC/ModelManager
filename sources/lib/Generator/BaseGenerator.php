@@ -9,7 +9,7 @@
  */
 namespace PommProject\ModelManager\Generator;
 
-use PommProject\Foundation\Inspector\Inspector;
+use PommProject\Foundation\Inspector\InspectorInterface;
 use PommProject\Foundation\ParameterHolder;
 use PommProject\ModelManager\Exception\GeneratorException;
 use PommProject\ModelManager\Session;
@@ -120,11 +120,11 @@ abstract class BaseGenerator
      * Shortcut to session's inspector client.
      *
      * @access protected
-     * @return Inspector
+     * @return InspectorInterface
      */
-    protected function getInspector()
+    protected function getInspector(string $name): InspectorInterface
     {
-        return $this->getSession()->getClientUsingPooler('inspector', null);
+        return $this->getSession()->getInspector('inspector', $name);
     }
 
     /**

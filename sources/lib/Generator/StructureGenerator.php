@@ -165,6 +165,7 @@ TEXT;
      */
     private function checkRelationInformation()
     {
+        // TODO fix inspector call
         if ($this->getInspector()->getSchemaOid($this->schema) === null) {
             throw new GeneratorException(sprintf("Schema '%s' not found.", $this->schema));
         }
