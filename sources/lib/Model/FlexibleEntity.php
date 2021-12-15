@@ -347,7 +347,7 @@ abstract class FlexibleEntity extends FlexibleContainer implements \ArrayAccess
     /**
      * {@inheritdoc}
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         $method_name = "has".Inflector::studlyCaps($offset);
 
@@ -357,7 +357,7 @@ abstract class FlexibleEntity extends FlexibleContainer implements \ArrayAccess
     /**
      * {@inheritdoc}
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
         $this->__set($offset, $value);
     }
@@ -365,7 +365,7 @@ abstract class FlexibleEntity extends FlexibleContainer implements \ArrayAccess
     /**
      * {@inheritdoc}
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return $this->__get($offset);
     }
@@ -373,7 +373,7 @@ abstract class FlexibleEntity extends FlexibleContainer implements \ArrayAccess
     /**
      * {@inheritdoc}
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         $this->clear($offset);
     }
