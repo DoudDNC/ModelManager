@@ -10,7 +10,7 @@
         "php": ">=8.0",
         "ext-pgsql": "*",
         "psr/log": "~1.0",
-        "pomm-project/foundation": "3.0.x-dev"
+        "pomm-project/foundation": "3.0.0"
     },
     "require-dev": {
         "atoum/atoum" : "^4.0"
@@ -28,7 +28,7 @@
             "PommProject\\ModelManager\\Test\\": "sources/tests"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "extra": {
         "branch-alias": {
             "dev-master": "3.0-dev"

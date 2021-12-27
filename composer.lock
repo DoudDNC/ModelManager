@@ -4,36 +4,35 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64558317f2f260ba39be5ccdb6f0ade3",
+    "content-hash": "67d85a30a466e0ceab6acde95271e898",
     "packages": [
         {
             "name": "pomm-project/foundation",
-            "version": "dev-master",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DoudDNC/Foundation.git",
-                "reference": "f2070dbc5eb3289659d2ce7da123ad57cc6c15e6"
+                "reference": "2d8a19abbb07a590357517e7418bba29a3d88f57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DoudDNC/Foundation/zipball/f2070dbc5eb3289659d2ce7da123ad57cc6c15e6",
-                "reference": "f2070dbc5eb3289659d2ce7da123ad57cc6c15e6",
+                "url": "https://api.github.com/repos/DoudDNC/Foundation/zipball/2d8a19abbb07a590357517e7418bba29a3d88f57",
+                "reference": "2d8a19abbb07a590357517e7418bba29a3d88f57",
                 "shasum": ""
             },
             "require": {
                 "ext-pgsql": "*",
-                "php": ">=8.1",
+                "php": ">=8.0",
                 "psr/log": "~1.0"
             },
             "require-dev": {
                 "atoum/atoum": "^4.0",
                 "squizlabs/php_codesniffer": "~2.8"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -65,9 +64,9 @@
                 "postgresql"
             ],
             "support": {
-                "source": "https://github.com/DoudDNC/Foundation/tree/master"
+                "source": "https://github.com/DoudDNC/Foundation/tree/3.0.0"
             },
-            "time": "2021-12-15T15:34:40+00:00"
+            "time": "2021-12-27T14:23:18+00:00"
         },
         {
             "name": "psr/log",
@@ -123,7 +122,7 @@
     "packages-dev": [
         {
             "name": "atoum/atoum",
-            "version": "dev-master",
+            "version": "4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atoum/atoum.git",
@@ -153,7 +152,6 @@
                 "ext-mbstring": "Provides support for UTF-8 strings",
                 "ext-xdebug": "Provides code coverage report (>= 2.3)"
             },
-            "default-branch": true,
             "bin": [
                 "bin/atoum"
             ],
@@ -211,10 +209,8 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "pomm-project/foundation": 20
-    },
+    "minimum-stability": "stable",
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
